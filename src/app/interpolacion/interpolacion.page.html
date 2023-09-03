@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Interpolación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h3><b>Ejemplo 1:</b> Mostrar el valor de una variable.</h3>
+
+  <ion-item><p>El nombre de cliente es: {{nombre}} {{apellido}}</p></ion-item>
+  <ion-item><p>La direccion es: {{direccion}}</p></ion-item>
+  <ion-item><p>{{persona.nombre}}<br>{{persona.direccion}}</p></ion-item>  
+
+  <h3><b>Ejemplo 2:</b> Evaluar expresiones.</h3>
+
+  <ion-item><p>El resultado de la suma 5+5 es: {{5 + 5}}</p></ion-item>
+
+  <h3><b>Ejemplo 3:</b> Evaluar funciones.</h3>
+
+  <ion-item><p>El resultado de la suma 5+7 es: {{sumar(5,6)}}</p></ion-item>
+  <ion-item><p>El siguiente texto se va a duplicar: {{duplicar('aplicacion')}}</p></ion-item>
+
+  <ion-button expand="block" (click)="irLogin()">Ir a Login FUNCION</ion-button>
+  <ion-button expand="block" [routerLink]="['/login']">Ir a Login NAVEGACION</ion-button>
+</ion-content>
