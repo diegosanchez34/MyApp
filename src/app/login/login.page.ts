@@ -38,6 +38,26 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
+    console.log('Se cargó el ngOnInit');
   }
 
+  ionViewWillEnter(){
+    console.log('Se cargó ionViewWillEnter');
+  }
+
+  ionViewDidEnter(){
+    console.log('Se cargó ionViewDidEnter');
+  }
+
+  ionViewWillLeave(){
+    console.log('Se cargó ionViewWillLeave');
+  }
+
+  ionViewDidLeave(){
+    console.log('Se cargó ionViewDidLeave');
+  }
+
+  ngOnDestroy(){
+    console.log('Se cargó ngOnDestroy');
+  }
 }
