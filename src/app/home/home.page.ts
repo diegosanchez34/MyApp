@@ -9,4 +9,5 @@ export class HomePage {
 
   constructor() {}
 
+  usuario = localStorage.getItem("user");
 }

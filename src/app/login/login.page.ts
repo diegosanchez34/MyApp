@@ -25,7 +25,8 @@ export class LoginPage implements OnInit {
   }
 
   verificar(){
-    if (this.usuario.length >= 3 && this.usuario.length  <= 8) {
+    if (this.usuario.length >= 3 && this.usuario.length  <= 25) {
+      this.enviarDatos();
       this.irHome();
     }
     else {
@@ -35,6 +36,10 @@ export class LoginPage implements OnInit {
 
   irHome(){
     this.router.navigate(['/home']);
+  }
+
+  enviarDatos(){
+    localStorage.setItem("user", this.usuario);
   }
 
   ngOnInit() {
